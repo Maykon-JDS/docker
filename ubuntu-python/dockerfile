@@ -1,0 +1,7 @@
+FROM ubuntu
+
+RUN apt update -y && apt full-upgrade -y && apt install -y nano python3 && apt clean
+
+COPY app.py /opt/app.py
+
+CMD python3 /opt/app.py
