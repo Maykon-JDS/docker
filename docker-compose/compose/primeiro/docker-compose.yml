@@ -7,7 +7,7 @@ services:
     ports:
       - "3307:3306"
     volumes:
-      - /j../../mysql-C:/var/lib/mysql
+      - /../../mysql-C:/var/lib/mysql
     networks:
       - minha-rede
 
