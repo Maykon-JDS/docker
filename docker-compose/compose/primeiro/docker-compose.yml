@@ -1,0 +1,23 @@
+services:
+  mysqlsrv:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "testdb"
+    ports:
+      - "3307:3306"
+    volumes:
+      - /j../../mysql-C:/var/lib/mysql
+    networks:
+      - minha-rede
+
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
+    networks:
+      - minha-rede
+
+networks:
+  minha-rede:
+    driver: bridge
